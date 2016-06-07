@@ -19,72 +19,37 @@
 
 </body>
 
+<!-- All of the smaller Portraits are "Character-Container" while the main boxes are (red)"Character-Box" and (blue) "Character-Box2" -->
 
-
-<div id="character-container">
- 
-
-
+  <div id="character-container">
   <h2>Character Select</h2>
-  
-
   <div id="character-box2"></div>
   <div id="character-box"></div>
   
+<!-- End -->
 
-
-
-  <img src="hakumenp.png" onclick="mario()"></img>
-
-
+<!-- All the Audio Files/IDs to be called for are here -->
 <audio id="hakumen-audio" src="VS_hazama_000.wav" ></audio>
-
 <audio id="thresh-audio" src="http://vignette4.wikia.nocookie.net/leagueoflegends/images/1/1e/Thresh_Select.ogg/revision/latest?cb=20130112075230" ></audio>
-
 <audio id="robert-audio" src="robert.mp3"></audio>
  <audio id="maxima-audio" src="maxima.mp3"></audio>
  <audio id="parasoul-audio" src="parasoul.mp3"></audio>
 <audio id="ermac-audio" src="ermac.mp3"></audio>
 <audio id="dudley-audio" src="dudley.mp3"></audio>
 <audio id="fulgore-audio" src="fulgore.mp3" ></audio>
+<!-- End of audio IDs-->
 
-  <img src="kod.png" onclick="jace()"></img>
- 
+<!-- Portrait of the characters in minor boxes -->
+  <img src="hakumenp.png" onclick="hakumen()"></img>
+  <img src="kod.png" onclick="robert()"></img>
+  <img src="thresh.png" onclick="thresh()"></img>
+  <img src="maximap.png" onclick="maxima()"></img>
+  <img src="parasol.png" onclick="parasol()"></img>
+  <img src="ermac p.png" onclick="ermac()"></img>
+  <img src="dudley.png" onclick="dudley()"></img>
+  <img src="fulgore.png" onclick="fulgore()"></img>
+<!-- End -->
 
-
-
-
-  <img src="thresh.png" onclick="megaman()"></img>
-  
-
-
-
-  <img src="maximap.png" onclick="wolf()"></img>
-  
-
-
-
-
-  <img src="parasol.png" onclick="steve()"></img>
-  
-
-
-
-  <img src="ermac p.png" onclick="troll()"></img>
-  
-
-
-
-
-
-  <img src="dudley.png" onclick="frank()"></img>
- 
-
-
-
-
-
-  <img src="fulgore.png" onclick="wars()"></img>
 </div>
 </div>
 </html>
@@ -173,12 +138,14 @@ h2 {
   margin-right: 0;
   position: relative;
   margin: auto;
+      /* Flips the image to look more "player 2"ish */
         -moz-transform: scaleX(-1);
         -o-transform: scaleX(-1);
         -webkit-transform: scaleX(-1);
         transform: scaleX(-1);
         filter: FlipH;
         -ms-filter: "FlipH";
+        
 }
 
 #character-box {
@@ -291,7 +258,7 @@ button{
 
 
 <script type="text/javascript">
-  function mario() {
+  function hakumen() {
   document.getElementById("character-box").style.backgroundImage = "url('hakumen.gif')";
    var audio = document.getElementById("hakumen-audio");
    audio.play();
@@ -333,7 +300,7 @@ else
 }
 }
 
-function jace() {
+function robert() {
   document.getElementById("character-box").style.backgroundImage = "url('robert.gif')";
     var audio = document.getElementById("robert-audio");
    audio.play();
@@ -375,7 +342,7 @@ else
 }
 }
 
-function megaman() {
+function thresh() {
   document.getElementById("character-box").style.backgroundImage = "url('thresh1.png')";
    var audio = document.getElementById("thresh-audio");
    audio.volume = 0.5;
@@ -417,7 +384,7 @@ else
 }
 }
 
-function wolf() {
+function maxima() {
   document.getElementById("character-box").style.backgroundImage = "url('maxima.gif')";
     var audio = document.getElementById("maxima-audio");
    audio.play();
@@ -459,7 +426,7 @@ else
 }
 }
 
-function steve() {
+function parasol() {
   document.getElementById("character-box").style.backgroundImage = "url('parasol2.png')";
     var audio = document.getElementById("parasoul-audio");
    audio.play();
@@ -500,7 +467,7 @@ else
    document.getElementById("character-box2").style.backgroundImage = "url('ermac.png')";
 }
 }
-function troll() {
+function ermac() {
   document.getElementById("character-box").style.backgroundImage = "url('ermac.png')";
     var audio = document.getElementById("ermac-audio");
    audio.play();
@@ -541,7 +508,7 @@ else
 }
 }
 
-function frank() {
+function dudley() {
   document.getElementById("character-box").style.backgroundImage = "url('dudley2.png')";
     var audio = document.getElementById("dudley-audio");
    audio.play();
@@ -583,7 +550,7 @@ else
 }
 }
 
-function wars() {
+function fulgore() {
   document.getElementById("character-box").style.backgroundImage = "url('fulgore1.png')";
     var audio = document.getElementById("fulgore-audio");
    audio.play();
