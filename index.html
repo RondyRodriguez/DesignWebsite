@@ -19,12 +19,12 @@
 
 </body>
 
-<!-- All of the smaller Portraits are "Character-Container" while the main boxes are (red)"Character-Box" and (blue) "Character-Box2" -->
+<!-- All of the smaller Portraits are "Character-Container" while the main boxes are (red)"leftbox" and (blue) "rightbox" -->
 <div id="box"> 
   <div id="character-container">
   <h2>Character Select</h2>
-  <div id="character-box2"></div>
-  <div id="character-box"></div>
+  <div id="rightbox">place character here!</div>
+  <div id="leftbox">place character here!</div>
   
 <!-- End -->
 
@@ -40,14 +40,14 @@
 <!-- End of audio IDs-->
 
 <!-- Portrait of the characters in minor boxes -->
-  <img src="hakumenHeadshot.png" onclick="hakumen()"></img>
-  <img src="RobertHeadshot.gif" onclick="robert()"></img>
-  <img src="baikenHeadshot.png" onclick="baiken()"></img>
-  <img src="MaximaHeadshot.gif" onclick="maxima()"></img>
-  <img src="parasol headshot.png" onclick="parasol()"></img>
-  <img src="ermac headshot.png" onclick="ermac()"></img>
-  <img src="dudleyheadshot.gif" onclick="dudley()"></img>
-  <img src="IronTagerHeadshot.png" onclick="IronTager()"></img>
+  <img id="hakumen" src="hakumenHeadshot.png"></img>
+  <img id="robert" src="RobertHeadshot.gif"></img>
+  <img id="baiken" src="baikenHeadshot.png"></img>
+  <img id="maxima" src="MaximaHeadshot.gif"></img>
+  <img id="parasol" src="parasol headshot.png"></img>
+  <img id="ermac" src="ermac headshot.png"></img>
+  <img id="dudley" src="dudleyheadshot.gif"></img>
+  <img id="irontager" src="IronTagerHeadshot.png"> </img>
 <!-- End -->
 </div>
 </div>
@@ -122,7 +122,7 @@ h2 {
   margin: 0 auto;
   position: relative;
 }
-#character-box2 {
+#rightbox {
   width: 300px;
   height: 370px;
   float: right;
@@ -147,7 +147,7 @@ h2 {
         
 }
 
-#character-box {
+#leftbox {
   width: 300px;
   height: 370px;
   float: left;
@@ -165,8 +165,8 @@ h2 {
 }
 
 #character-container img {
-  height: 50px;
-  width: 50px;
+  height: 75px;
+  width: 75px;
   border: 3px groove green;
   margin: 2.5px;
 }
@@ -235,361 +235,7 @@ button{
 }
 
 
-
-
-
-
-
-
-
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
-<script type="text/javascript">
-  function hakumen() {
-  document.getElementById("character-box").style.backgroundImage = "url('hakumen.gif')";
-   var audio = document.getElementById("hakumen-audio");
-   audio.play();
-   audio.volume = 0.5;
-   var computerChoice = Math.random();
-console.log(computerChoice);
-
-if(computerChoice <= 0.12)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('hakumen.gif')";
-}
-else if(computerChoice <= 0.24)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('baikenSelect.gif')";
-}
-else if(computerChoice <= 0.36)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('maxima.gif')";
-}
-else if(computerChoice <= 0.48)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('robert.gif')";
-}
-else if(computerChoice <= 0.60)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('IronTagerSelect.gif')";
-}
-else if(computerChoice <= 0.72)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('parasolSelect.gif')";
-}
-else if(computerChoice <= 0.84)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('dudleySelect.gif')";
-}
-else
-{
-   document.getElementById("character-box2").style.backgroundImage = "url('ErmacSelect.gif')";
-}
-}
-
-function robert() {
-  document.getElementById("character-box").style.backgroundImage = "url('robert.gif')";
-    var audio = document.getElementById("robert-audio");
-   audio.play();
-   audio.volume = 0.7;
-     var computerChoice = Math.random();
-console.log(computerChoice);
-
-if(computerChoice <= 0.12)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('hakumen.gif')";
-}
-else if(computerChoice <= 0.24)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('baikenSelect.gif')";
-}
-else if(computerChoice <= 0.36)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('maxima.gif')";
-}
-else if(computerChoice <= 0.48)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('robert.gif')";
-}
-else if(computerChoice <= 0.60)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('IronTagerSelect.gif')";
-}
-else if(computerChoice <= 0.72)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('parasolSelect.gif')";
-}
-else if(computerChoice <= 0.84)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('dudleySelect.gif')";
-}
-else
-{
-   document.getElementById("character-box2").style.backgroundImage = "url('ErmacSelect.gif')";
-}
-}
-
-function baiken() {
-  document.getElementById("character-box").style.backgroundImage = "url('baikenSelect.gif')";
-var audio = document.getElementById("baiken-audio");
-   audio.play();
-  audio.volume = 1.0;
-    var computerChoice = Math.random();
-console.log(computerChoice);
-
-if(computerChoice <= 0.12)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('hakumen.gif')";
-}
-else if(computerChoice <= 0.24)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('baikenSelect.gif')";
-}
-else if(computerChoice <= 0.36)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('maxima.gif')";
-}
-else if(computerChoice <= 0.48)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('robert.gif')";
-}
-else if(computerChoice <= 0.60)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('IronTagerSelect.gif')";
-}
-else if(computerChoice <= 0.72)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('parasolSelect.gif')";
-}
-else if(computerChoice <= 0.84)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('dudleySelect.gif')";
-}
-else
-{
-   document.getElementById("character-box2").style.backgroundImage = "url('ErmacSelect.gif')";
-}
-}
-
-function maxima() {
-  document.getElementById("character-box").style.backgroundImage = "url('maxima.gif')";
-    var audio = document.getElementById("maxima-audio");
-   audio.play();
-   audio.volume = 0.7;
-   var computerChoice = Math.random();
-console.log(computerChoice);
-
-if(computerChoice <= 0.12)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('hakumen.gif')";
-}
-else if(computerChoice <= 0.24)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('baikenSelect.gif')";
-}
-else if(computerChoice <= 0.36)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('maxima.gif')";
-}
-else if(computerChoice <= 0.48)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('robert.gif')";
-}
-else if(computerChoice <= 0.60)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('IronTagerSelect.gif')";
-}
-else if(computerChoice <= 0.72)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('parasolSelect.gif')";
-}
-else if(computerChoice <= 0.84)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('dudleySelect.gif')";
-}
-else
-{
-   document.getElementById("character-box2").style.backgroundImage = "url('ErmacSelect.gif')";
-}
-}
-
-function parasol() {
-  document.getElementById("character-box").style.backgroundImage = "url('parasolselect.gif')";
-    var audio = document.getElementById("parasoul-audio");
-   audio.play();
-   audio.volume = 0.5;
-   var computerChoice = Math.random();
-console.log(computerChoice);
-
-if(computerChoice <= 0.12)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('hakumen.gif')";
-}
-else if(computerChoice <= 0.24)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('baikenSelect.gif')";
-}
-else if(computerChoice <= 0.36)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('maxima.gif')";
-}
-else if(computerChoice <= 0.48)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('robert.gif')";
-}
-else if(computerChoice <= 0.60)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('IronTagerSelect')";
-}
-else if(computerChoice <= 0.72)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('parasolSelect.gif')";
-}
-else if(computerChoice <= 0.84)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('dudleySelect.gif')";
-}
-else
-{
-   document.getElementById("character-box2").style.backgroundImage = "url('ErmacSelect.gif')";
-}
-}
-function ermac() {
-  document.getElementById("character-box").style.backgroundImage = "url('ermacSelect.gif')";
-    var audio = document.getElementById("ermac-audio");
-   audio.play();
-   var computerChoice = Math.random();
-console.log(computerChoice);
-
-if(computerChoice <= 0.12)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('hakumen.gif')";
-}
-else if(computerChoice <= 0.24)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('baikenSelect.gif')";
-}
-else if(computerChoice <= 0.36)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('maxima.gif')";
-}
-else if(computerChoice <= 0.48)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('robert.gif')";
-}
-else if(computerChoice <= 0.60)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('IronTagerSelect.gif')";
-}
-else if(computerChoice <= 0.72)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('parasolSelect.gif')";
-}
-else if(computerChoice <= 0.84)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('dudleySelect.gif')";
-}
-else
-{
-   document.getElementById("character-box2").style.backgroundImage = "url('ErmacSelect.gif')";
-}
-}
-
-function dudley() {
-  document.getElementById("character-box").style.backgroundImage = "url('dudleyselect.gif')";
-    var audio = document.getElementById("dudley-audio");
-   audio.play();
-  audio.volume = 1.0;
-   var computerChoice = Math.random();
-console.log(computerChoice);
-
-if(computerChoice <= 0.12)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('hakumen.gif')";
-}
-else if(computerChoice <= 0.24)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('baikenSelect.gif')";
-}
-else if(computerChoice <= 0.36)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('maxima.gif')";
-}
-else if(computerChoice <= 0.48)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('robert.gif')";
-}
-else if(computerChoice <= 0.60)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('IronTagerSelect.gif')";
-}
-else if(computerChoice <= 0.72)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('parasolSelect.gif')";
-}
-else if(computerChoice <= 0.84)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('dudleySelect.gif')";
-}
-else
-{
-   document.getElementById("character-box2").style.backgroundImage = "url('ErmacSelect.gif')";
-}
-}
-
-function IronTager() {
-  document.getElementById("character-box").style.backgroundImage = "url('IronTagerSelect.gif')";
-    var audio = document.getElementById("IronTager-audio");
-   audio.play();
-   audio.volume = 0.5;
-   var computerChoice = Math.random();
-console.log(computerChoice);
-
-if(computerChoice <= 0.12)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('hakumen.gif')";
-}
-else if(computerChoice <= 0.24)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('baikenSelect.gif')";
-}
-else if(computerChoice <= 0.36)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('maxima.gif')";
-}
-else if(computerChoice <= 0.48)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('robert.gif')";
-}
-else if(computerChoice <= 0.60)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('IronTagerSelect.gif')";
-}
-else if(computerChoice <= 0.72)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('parasolSelect.gif')";
-}
-else if(computerChoice <= 0.84)
-{
-    document.getElementById("character-box2").style.backgroundImage = "url('dudleySelect.gif')";
-}
-else
-{
-   document.getElementById("character-box2").style.backgroundImage = "url('ErmacSelect.gif')";
-}
-}
-</script>
 
 
 
@@ -610,3 +256,29 @@ function setFullVolume() {
 } 
 </script> 
 
+<script type="text/javascript">
+function doFirst(){
+  mypic = document.getElementById('hakumen');
+  mypic.addEventListener("dragstart",startDrag, false);
+  leftbox = document.getElementById('leftbox');
+  leftbox.addEventListener("dragenter",function(e){e.preventDefault();} , false);
+  leftbox.addEventListener("dragover",function(e){e.preventDefault();} , false);
+  leftbox.addEventListener("drop",dropped,false);
+
+}
+
+function startDrag(e){
+  var code = '<img src="hakumen.gif">';
+  e.dataTransfer.setData('Text',code);
+}
+function dropped(e){
+  e.preventDefault(); 
+  leftbox.innerHTML = e.dataTransfer.getData('Text');
+   var audio = document.getElementById("hakumen-audio");
+   audio.play();
+   audio.volume = 0.5;
+   leftbox.innerCSS = e.dataTransfer.getData('Text');
+}
+
+  window.addEventListener("load", doFirst, false);
+</script>
