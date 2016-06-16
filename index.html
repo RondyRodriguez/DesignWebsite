@@ -19,37 +19,37 @@
 
 </body>
 
-<!-- All of the smaller Portraits are "Character-Container" while the main boxes are (red)"leftbox" and (blue) "rightbox" -->
-<div id="box"> 
+<!-- All of the smaller Portraits are "Character-Container" while the main boxes are (red)"Character-Box" and (blue) "Character-Box2" -->
+
   <div id="character-container">
   <h2>Character Select</h2>
-  <div id="rightbox">place character here!</div>
-  <div id="leftbox">place character here!</div>
+  <div id="character-box2"></div>
+  <div id="character-box"></div>
   
 <!-- End -->
 
 <!-- All the Audio Files/IDs to be called for are here -->
 <audio id="hakumen-audio" src="VS_hazama_000.wav" ></audio>
-<audio id="baiken-audio" src="baikenVA.mp3" ></audio>
+<audio id="thresh-audio" src="http://vignette4.wikia.nocookie.net/leagueoflegends/images/1/1e/Thresh_Select.ogg/revision/latest?cb=20130112075230" ></audio>
 <audio id="robert-audio" src="robert.mp3"></audio>
  <audio id="maxima-audio" src="maxima.mp3"></audio>
  <audio id="parasoul-audio" src="parasoul.mp3"></audio>
 <audio id="ermac-audio" src="ermac.mp3"></audio>
 <audio id="dudley-audio" src="dudley.mp3"></audio>
-<audio id="IronTager-audio" src="IronTagerVA.mp3" ></audio>
+<audio id="fulgore-audio" src="fulgore.mp3" ></audio>
 <!-- End of audio IDs-->
 
 <!-- Portrait of the characters in minor boxes -->
-  <img id="hakumen" src="hakumenHeadshot.png"></img>
-  <img id="robert" src="RobertHeadshot.gif"></img>
-  <img id="baiken" src="baikenHeadshot.png"></img>
-  <img id="maxima" src="MaximaHeadshot.gif"></img>
-  <img id="parasol" src="parasol headshot.png"></img>
-  <img id="ermac" src="ermac headshot.png"></img>
-  <img id="dudley" src="dudleyheadshot.gif"></img>
-  <img id="irontager" src="IronTagerHeadshot.png"> </img>
+  <img src="hakumenp.png" onclick="hakumen()"></img>
+  <img src="kod.png" onclick="robert()"></img>
+  <img src="thresh.png" onclick="thresh()"></img>
+  <img src="maximap.png" onclick="maxima()"></img>
+  <img src="parasol.png" onclick="parasol()"></img>
+  <img src="ermac p.png" onclick="ermac()"></img>
+  <img src="dudley.png" onclick="dudley()"></img>
+  <img src="fulgore.png" onclick="fulgore()"></img>
 <!-- End -->
-</div>
+
 </div>
 </div>
 </html>
@@ -118,11 +118,12 @@ h2 {
   padding: 10px;
   width: 1000px;
   height: 600px;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-sizing: border-box;
   margin: 0 auto;
   position: relative;
 }
-#rightbox {
+#character-box2 {
   width: 300px;
   height: 370px;
   float: right;
@@ -147,7 +148,7 @@ h2 {
         
 }
 
-#leftbox {
+#character-box {
   width: 300px;
   height: 370px;
   float: left;
@@ -165,9 +166,10 @@ h2 {
 }
 
 #character-container img {
-  height: 75px;
-  width: 75px;
+  height: 150px;
+  width: 100px;
   border: 3px groove green;
+  padding: 10px;
   margin: 2.5px;
 }
 
@@ -235,7 +237,361 @@ button{
 }
 
 
+
+
+
+
+
+
+
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  function hakumen() {
+  document.getElementById("character-box").style.backgroundImage = "url('hakumen.gif')";
+   var audio = document.getElementById("hakumen-audio");
+   audio.play();
+   audio.volume = 0.5;
+   var computerChoice = Math.random();
+console.log(computerChoice);
+
+if(computerChoice <= 0.12)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('hakumen.gif')";
+}
+else if(computerChoice <= 0.24)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('thresh1.png')";
+}
+else if(computerChoice <= 0.36)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('maxima.gif')";
+}
+else if(computerChoice <= 0.48)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('robert.gif')";
+}
+else if(computerChoice <= 0.60)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('dudley2.png')";
+}
+else if(computerChoice <= 0.72)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('parasol2.png')";
+}
+else if(computerChoice <= 0.84)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('fulgore1.png')";
+}
+else
+{
+   document.getElementById("character-box2").style.backgroundImage = "url('ermac.png')";
+}
+}
+
+function robert() {
+  document.getElementById("character-box").style.backgroundImage = "url('robert.gif')";
+    var audio = document.getElementById("robert-audio");
+   audio.play();
+   audio.volume = 0.7;
+     var computerChoice = Math.random();
+console.log(computerChoice);
+
+if(computerChoice <= 0.12)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('hakumen.gif')";
+}
+else if(computerChoice <= 0.24)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('thresh1.png')";
+}
+else if(computerChoice <= 0.36)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('maxima.gif')";
+}
+else if(computerChoice <= 0.48)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('robert.gif')";
+}
+else if(computerChoice <= 0.60)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('dudley2.png')";
+}
+else if(computerChoice <= 0.72)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('parasol2.png')";
+}
+else if(computerChoice <= 0.84)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('fulgore1.png')";
+}
+else
+{
+   document.getElementById("character-box2").style.backgroundImage = "url('ermac.png')";
+}
+}
+
+function thresh() {
+  document.getElementById("character-box").style.backgroundImage = "url('thresh1.png')";
+   var audio = document.getElementById("thresh-audio");
+   audio.volume = 0.5;
+   audio.play();
+    var computerChoice = Math.random();
+console.log(computerChoice);
+
+if(computerChoice <= 0.12)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('hakumen.gif')";
+}
+else if(computerChoice <= 0.24)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('thresh1.png')";
+}
+else if(computerChoice <= 0.36)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('maxima.gif')";
+}
+else if(computerChoice <= 0.48)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('robert.gif')";
+}
+else if(computerChoice <= 0.60)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('dudley2.png')";
+}
+else if(computerChoice <= 0.72)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('parasol2.png')";
+}
+else if(computerChoice <= 0.84)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('fulgore1.png')";
+}
+else
+{
+   document.getElementById("character-box2").style.backgroundImage = "url('ermac.png')";
+}
+}
+
+function maxima() {
+  document.getElementById("character-box").style.backgroundImage = "url('maxima.gif')";
+    var audio = document.getElementById("maxima-audio");
+   audio.play();
+   audio.volume = 0.7;
+   var computerChoice = Math.random();
+console.log(computerChoice);
+
+if(computerChoice <= 0.12)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('hakumen.gif')";
+}
+else if(computerChoice <= 0.24)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('thresh1.png')";
+}
+else if(computerChoice <= 0.36)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('maxima.gif')";
+}
+else if(computerChoice <= 0.48)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('robert.gif')";
+}
+else if(computerChoice <= 0.60)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('dudley2.png')";
+}
+else if(computerChoice <= 0.72)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('parasol2.png')";
+}
+else if(computerChoice <= 0.84)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('fulgore1.png')";
+}
+else
+{
+   document.getElementById("character-box2").style.backgroundImage = "url('ermac.png')";
+}
+}
+
+function parasol() {
+  document.getElementById("character-box").style.backgroundImage = "url('parasol2.png')";
+    var audio = document.getElementById("parasoul-audio");
+   audio.play();
+   audio.volume = 0.5;
+   var computerChoice = Math.random();
+console.log(computerChoice);
+
+if(computerChoice <= 0.12)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('hakumen.gif')";
+}
+else if(computerChoice <= 0.24)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('thresh1.png')";
+}
+else if(computerChoice <= 0.36)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('maxima.gif')";
+}
+else if(computerChoice <= 0.48)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('robert.gif')";
+}
+else if(computerChoice <= 0.60)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('dudley2.png')";
+}
+else if(computerChoice <= 0.72)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('parasol2.png')";
+}
+else if(computerChoice <= 0.84)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('fulgore1.png')";
+}
+else
+{
+   document.getElementById("character-box2").style.backgroundImage = "url('ermac.png')";
+}
+}
+function ermac() {
+  document.getElementById("character-box").style.backgroundImage = "url('ermac.png')";
+    var audio = document.getElementById("ermac-audio");
+   audio.play();
+   var computerChoice = Math.random();
+console.log(computerChoice);
+
+if(computerChoice <= 0.12)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('hakumen.gif')";
+}
+else if(computerChoice <= 0.24)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('thresh1.png')";
+}
+else if(computerChoice <= 0.36)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('maxima.gif')";
+}
+else if(computerChoice <= 0.48)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('robert.gif')";
+}
+else if(computerChoice <= 0.60)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('dudley2.png')";
+}
+else if(computerChoice <= 0.72)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('parasol2.png')";
+}
+else if(computerChoice <= 0.84)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('fulgore1.png')";
+}
+else
+{
+   document.getElementById("character-box2").style.backgroundImage = "url('ermac.png')";
+}
+}
+
+function dudley() {
+  document.getElementById("character-box").style.backgroundImage = "url('dudley2.png')";
+    var audio = document.getElementById("dudley-audio");
+   audio.play();
+  audio.volume = 1.0;
+   var computerChoice = Math.random();
+console.log(computerChoice);
+
+if(computerChoice <= 0.12)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('hakumen.gif')";
+}
+else if(computerChoice <= 0.24)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('thresh1.png')";
+}
+else if(computerChoice <= 0.36)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('maxima.gif')";
+}
+else if(computerChoice <= 0.48)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('robert.gif')";
+}
+else if(computerChoice <= 0.60)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('dudley2.png')";
+}
+else if(computerChoice <= 0.72)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('parasol2.png')";
+}
+else if(computerChoice <= 0.84)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('fulgore1.png')";
+}
+else
+{
+   document.getElementById("character-box2").style.backgroundImage = "url('ermac.png')";
+}
+}
+
+function fulgore() {
+  document.getElementById("character-box").style.backgroundImage = "url('fulgore1.png')";
+    var audio = document.getElementById("fulgore-audio");
+   audio.play();
+   audio.volume = 0.5;
+   var computerChoice = Math.random();
+console.log(computerChoice);
+
+if(computerChoice <= 0.12)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('hakumen.gif')";
+}
+else if(computerChoice <= 0.24)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('thresh1.png')";
+}
+else if(computerChoice <= 0.36)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('maxima.gif')";
+}
+else if(computerChoice <= 0.48)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('robert.gif')";
+}
+else if(computerChoice <= 0.60)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('dudley2.png')";
+}
+else if(computerChoice <= 0.72)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('parasol2.png')";
+}
+else if(computerChoice <= 0.84)
+{
+    document.getElementById("character-box2").style.backgroundImage = "url('fulgore1.png')";
+}
+else
+{
+   document.getElementById("character-box2").style.backgroundImage = "url('ermac.png')";
+}
+}
+</script>
 
 
 
@@ -256,29 +612,3 @@ function setFullVolume() {
 } 
 </script> 
 
-<script type="text/javascript">
-function doFirst(){
-  mypic = document.getElementById('hakumen');
-  mypic.addEventListener("dragstart",startDrag, false);
-  leftbox = document.getElementById('leftbox');
-  leftbox.addEventListener("dragenter",function(e){e.preventDefault();} , false);
-  leftbox.addEventListener("dragover",function(e){e.preventDefault();} , false);
-  leftbox.addEventListener("drop",dropped,false);
-
-}
-
-function startDrag(e){
-  var code = '<img src="hakumen.gif">';
-  e.dataTransfer.setData('Text',code);
-}
-function dropped(e){
-  e.preventDefault(); 
-  leftbox.innerHTML = e.dataTransfer.getData('Text');
-   var audio = document.getElementById("hakumen-audio");
-   audio.play();
-   audio.volume = 0.5;
-   leftbox.innerCSS = e.dataTransfer.getData('Text');
-}
-
-  window.addEventListener("load", doFirst, false);
-</script>
